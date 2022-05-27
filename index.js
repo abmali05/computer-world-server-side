@@ -39,11 +39,11 @@ function verifyJWT(req, res, next) {
 async function run() {
     try {
         await client.connect();
-        const productCollection = client.db('computer_product').collection('products');
+        const productCollection = client.db('computer_world').collection('products');
 
-        const orderCollection = client.db('computer_product').collection('orders');
-        const userCollection = client.db('computer_product').collection('users');
-        const reviewCollection = client.db('computer_product').collection('reviews');
+        const orderCollection = client.db('computer_world').collection('orders');
+        const userCollection = client.db('computer_world').collection('users');
+        const reviewCollection = client.db('computer_world').collection('reviews');
 
 
         app.get('/products', async (req, res) => {
